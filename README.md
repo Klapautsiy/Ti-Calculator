@@ -5,8 +5,13 @@ Ti-Calculator.
 inspired Sinclair Scientific Calculator.
 http://files.righto.com/calculator/sinclair_scientific_simulator.html
 
+the code
+https://github.com/Klapautsiy/Ti-Calculator
+
 the code used a library "titanium bicycle for button".
 https://klapautsiy.github.io/titanium-bicycle-for-button/
+
+MIT License.
 
 Arduino board and LCD1602 HD44780 and matrix keypad 4x4.
 
@@ -26,7 +31,7 @@ key               index key
 IEEE Standard for Floating-Point Arithmetic (IEEE 754).
 single-precision floating-point format.
 
-key: [C] -> nullify all
+key: [C] -> nullify result
 key: [!] -> sign of mantissa and exponentials
 key: [+] -> addition
 key: [-] -> subtraction
