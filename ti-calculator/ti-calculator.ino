@@ -5,8 +5,13 @@ Ti-Calculator.
 inspired Sinclair Scientific Calculator.
 http://files.righto.com/calculator/sinclair_scientific_simulator.html
 
+the code
+https://github.com/Klapautsiy/Ti-Calculator
+
 the code used a library "titanium bicycle for button".
 https://klapautsiy.github.io/titanium-bicycle-for-button/
+
+MIT License.
 
 Arduino board and LCD1602 HD44780 and matrix keypad 4x4.
 
@@ -26,7 +31,7 @@ key               index key
 IEEE Standard for Floating-Point Arithmetic (IEEE 754).
 single-precision floating-point format.
 
-key: [C] -> nullify all
+key: [C] -> nullify result
 key: [!] -> sign of mantissa and exponentials
 key: [+] -> addition
 key: [-] -> subtraction
@@ -108,7 +113,7 @@ if (i >   1 && i < 10) i = 10;
 
 }
 
-if (keypad.event_click_Dn(13) == 1) {key = 'C'; clear_all();} // key 'c' - (13)
+if (keypad.event_click_Dn(13) == 1) {key = 'C'; f_result = 0.0;} // key 'c' - (13)
 
 if (keypad.event_click_Dn() == 1) print_LCD();
 
@@ -123,11 +128,6 @@ void clear_f_input() {
 dtostre(0.0, f_input, 6, DTOSTR_ALWAYS_SIGN);
 end_input = 0;
 i = 1;
-}
-
-void clear_all() {
-clear_f_input();
-f_result = 0.0;
 }
 
 void input(char &a) {
